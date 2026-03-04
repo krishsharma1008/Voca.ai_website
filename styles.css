@@ -1723,3 +1723,464 @@ p {
     transform: none;
   }
 }
+
+/* ===== Minimal Light Theme Override ===== */
+body.theme-minimal {
+  background: #f1f3f6;
+  color: #1f2937;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --bg-card: #ffffff;
+  --line-soft: #d6dee8;
+  --teal: #1f72e8;
+  --cyan: #2f89ff;
+  --coral: #f97316;
+  --shadow-glow: none;
+}
+
+body.theme-minimal .ambient {
+  display: none;
+}
+
+body.theme-minimal p {
+  color: #4b5563;
+}
+
+body.theme-minimal .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 0.74rem;
+  color: #2563eb;
+}
+
+body.theme-minimal .eyebrow::before,
+body.theme-minimal .hero-copy::before,
+body.theme-minimal .hero-kicker-pill::before,
+body.theme-minimal .hero-title::before,
+body.theme-minimal .hero-title::after {
+  display: none !important;
+}
+
+body.theme-minimal h1,
+body.theme-minimal h2,
+body.theme-minimal h3,
+body.theme-minimal .brand-text,
+body.theme-minimal .metric-value,
+body.theme-minimal .benchmark-kpi {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body.theme-minimal .site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0;
+}
+
+body.theme-minimal .site-header::after {
+  display: none;
+}
+
+body.theme-minimal .header-inner {
+  min-height: 78px;
+  border-radius: 0;
+  border: none;
+  background: #ffffff;
+  box-shadow: none;
+  padding: 0 0.2rem;
+}
+
+body.theme-minimal .header-inner::before {
+  display: none;
+}
+
+body.theme-minimal .brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: none;
+  animation: none;
+}
+
+body.theme-minimal .brand-text {
+  color: #1f3f73;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+body.theme-minimal .brand-sub {
+  color: #f97316;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+body.theme-minimal .site-nav {
+  background: transparent;
+  border: none;
+  gap: 0.1rem;
+}
+
+body.theme-minimal .site-nav a {
+  color: #374151;
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  padding: 0.46rem 0.72rem;
+}
+
+body.theme-minimal .site-nav a:hover,
+body.theme-minimal .site-nav a:focus-visible {
+  background: #eef3fb;
+  color: #1f2937;
+}
+
+body.theme-minimal .site-nav a.active {
+  color: #1f2937;
+  background: #eef3fb;
+  box-shadow: none;
+}
+
+body.theme-minimal .header-cta {
+  min-height: 44px;
+  border-radius: 999px;
+  background: #1f72e8;
+  color: #ffffff;
+  border: 2px solid #f97316;
+  box-shadow: none;
+  padding: 0 1.2rem;
+}
+
+body.theme-minimal .header-cta:hover,
+body.theme-minimal .header-cta:focus-visible {
+  background: #155ac4;
+}
+
+body.theme-minimal .section {
+  padding: 4.4rem 0;
+}
+
+body.theme-minimal .legacy,
+body.theme-minimal .assist-loop,
+body.theme-minimal .integrations {
+  background: transparent;
+}
+
+body.theme-minimal .hero::before,
+body.theme-minimal .hero::after {
+  display: none;
+}
+
+body.theme-minimal .hero {
+  padding-top: 3rem;
+  min-height: auto;
+}
+
+body.theme-minimal .hero-grid {
+  gap: 2.4rem;
+}
+
+body.theme-minimal .hero-copy {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+body.theme-minimal .hero-kicker-row,
+body.theme-minimal .hero-proof,
+body.theme-minimal .hero-floating {
+  display: none;
+}
+
+body.theme-minimal .hero-title {
+  color: #24282f;
+  text-shadow: none;
+  font-size: clamp(2.45rem, 5vw, 4.35rem);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  max-width: 12ch;
+}
+
+body.theme-minimal .hero-subtitle {
+  max-width: 54ch;
+  font-size: 1.18rem;
+  color: #4b5563;
+}
+
+body.theme-minimal .hero-cta .btn-primary {
+  background: #1f72e8;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+body.theme-minimal .hero-cta .btn-primary::after {
+  display: none;
+}
+
+body.theme-minimal .hero-cta .btn-outline {
+  border-color: #cbd5e1;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+body.theme-minimal .hero-metrics {
+  margin-top: 1.2rem;
+}
+
+body.theme-minimal .metric-chip {
+  border: 1px solid #d9e1ea;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+body.theme-minimal .metric-value {
+  color: #1f72e8;
+}
+
+body.theme-minimal .metric-label {
+  color: #4b5563;
+}
+
+body.theme-minimal .hero-visual {
+  border: 1px solid #d6dee8;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+body.theme-minimal .hero-visual::before {
+  background: none;
+}
+
+body.theme-minimal #hero-wave {
+  opacity: 0.65;
+}
+
+body.theme-minimal .hero-glass {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #d6dee8;
+  backdrop-filter: none;
+}
+
+body.theme-minimal .glass-label {
+  color: #1f72e8;
+}
+
+body.theme-minimal .live-feed li {
+  color: #1f2937;
+}
+
+body.theme-minimal .feed-pill {
+  border-radius: 999px;
+}
+
+body.theme-minimal .intent-hot {
+  color: #064e3b;
+  background: #d1fae5;
+}
+
+body.theme-minimal .intent-mid {
+  color: #1e3a8a;
+  background: #dbeafe;
+}
+
+body.theme-minimal .intent-save {
+  color: #9a3412;
+  background: #ffedd5;
+}
+
+body.theme-minimal .wave-divider-canvas {
+  border-radius: 16px;
+  border: 1px solid #d6dee8;
+  background: #ffffff;
+  box-shadow: none;
+  animation: none;
+}
+
+body.theme-minimal .section-head h2,
+body.theme-minimal .pain-card h3,
+body.theme-minimal .legacy-panel h3,
+body.theme-minimal .product-card h3,
+body.theme-minimal .detail-card h3,
+body.theme-minimal .assist-loop-card h3,
+body.theme-minimal .timeline-grid h3,
+body.theme-minimal .guardrail-grid h3,
+body.theme-minimal .faq-item summary,
+body.theme-minimal .spotlight-value,
+body.theme-minimal .benchmark-card h3 {
+  color: #1f2937;
+}
+
+body.theme-minimal .benchmark-kpi {
+  color: #1f72e8;
+  text-shadow: none;
+}
+
+body.theme-minimal .spotlight-label,
+body.theme-minimal .spotlight-note,
+body.theme-minimal .benchmark-card p,
+body.theme-minimal .signal-item span,
+body.theme-minimal .language-title,
+body.theme-minimal .segment-jumps p,
+body.theme-minimal .accent-row p,
+body.theme-minimal .audio-time,
+body.theme-minimal .timeline-grid p,
+body.theme-minimal .guardrail-grid p,
+body.theme-minimal .faq-item p,
+body.theme-minimal .stack-strip span,
+body.theme-minimal .cta-copy p,
+body.theme-minimal .cta-bullets li {
+  color: #4b5563;
+}
+
+body.theme-minimal .cta-bullets {
+  color: #374151;
+}
+
+body.theme-minimal .btn {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-weight: 600;
+}
+
+body.theme-minimal .btn:hover,
+body.theme-minimal .btn:focus-visible {
+  transform: none;
+}
+
+body.theme-minimal .pain-card,
+body.theme-minimal .legacy-panel,
+body.theme-minimal .product-card,
+body.theme-minimal .detail-card,
+body.theme-minimal .assist-loop-card,
+body.theme-minimal .audio-card,
+body.theme-minimal .benchmark-card,
+body.theme-minimal .spotlight-card,
+body.theme-minimal .timeline-grid article,
+body.theme-minimal .guardrail-grid article,
+body.theme-minimal .demo-form,
+body.theme-minimal .faq-item,
+body.theme-minimal .stack-strip span {
+  background: #ffffff;
+  border: 1px solid #dbe2eb;
+  box-shadow: none;
+}
+
+body.theme-minimal .product-card::after,
+body.theme-minimal .audio-card::before,
+body.theme-minimal #benchmarks::before {
+  display: none;
+}
+
+body.theme-minimal .product-tag,
+body.theme-minimal .benchmark-badge {
+  background: #eaf2ff;
+  color: #1f3f73;
+}
+
+body.theme-minimal .benchmark-signal {
+  background: #f3f4f6;
+  color: #4b5563;
+  border-color: #d1d5db;
+}
+
+body.theme-minimal .bar-track {
+  border-color: #d6dee8;
+  background: #eef2f7;
+}
+
+body.theme-minimal .bar-track i {
+  background: linear-gradient(90deg, #1f72e8, #3b82f6);
+}
+
+body.theme-minimal .chip,
+body.theme-minimal .segment-btn,
+body.theme-minimal .transcript-item {
+  background: #ffffff;
+  border: 1px solid #d6dee8;
+  color: #374151;
+}
+
+body.theme-minimal .segment-btn.active {
+  background: #1f72e8;
+  color: #ffffff;
+}
+
+body.theme-minimal .benchmark-card:hover,
+body.theme-minimal .benchmark-card:focus-within {
+  transform: none;
+  box-shadow: none;
+}
+
+body.theme-minimal .benchmark-card[data-priority="high"] {
+  border-color: #dbe2eb;
+  box-shadow: none;
+}
+
+body.theme-minimal .benchmark-card[data-priority="high"] .benchmark-kpi {
+  font-size: 1.9rem;
+}
+
+body.theme-minimal .demo-form label {
+  color: #334155;
+}
+
+body.theme-minimal .demo-form input,
+body.theme-minimal .demo-form select,
+body.theme-minimal .demo-form textarea {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #cfd8e3;
+}
+
+body.theme-minimal .demo-form input::placeholder,
+body.theme-minimal .demo-form textarea::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+body.theme-minimal .demo-form input:focus-visible,
+body.theme-minimal .demo-form select:focus-visible,
+body.theme-minimal .demo-form textarea:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 1px;
+}
+
+body.theme-minimal .form-note {
+  color: #4b5563;
+}
+
+body.theme-minimal .form-note a {
+  color: #1f72e8;
+}
+
+body.theme-minimal .site-footer {
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+body.theme-minimal .toast {
+  background: #ffffff;
+  color: #1f2937;
+  border-color: #d6dee8;
+}
+
+body.theme-minimal .toast.error {
+  border-color: #fca5a5;
+}
+
+@media (max-width: 940px) {
+  body.theme-minimal .header-inner {
+    min-height: 70px;
+  }
+
+  body.theme-minimal .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "phase": "completed",
+  "timestamp": "2026-03-04T08:06:09.972Z",
+  "runId": "1772611553681-si31ic",
+  "message": "Pipeline complete — 67% pass rate",
+  "results": {
+    "total": 15,
+    "passed": 10,
+    "failed": 5,
+    "skipped": 0,
+    "duration": "60887ms",
+    "passRate": "67%"
+  },
+  "reportPath": "/Users/krishsharma/Desktop/VOCA_AI/testbot-reports/report-2026-03-04T08-06-09-833Z.json",
+  "dashboardUrl": "/Users/krishsharma/Desktop/VOCA_AI/testbot-reports/report-2026-03-04T08-06-09-833Z.json"
+}

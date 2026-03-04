@@ -238,6 +238,7 @@
     }
   };
 
+  const minimalTheme = document.body.classList.contains("theme-minimal");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function renderCopy() {
@@ -433,7 +434,7 @@
       const width = canvas.width;
       const height = canvas.height;
       const centerY = height / 2;
-      const fillAlpha = tone === "hero" ? 0.45 : 0.75;
+      const fillAlpha = minimalTheme ? (tone === "hero" ? 0.22 : 0.36) : tone === "hero" ? 0.45 : 0.75;
 
       context.clearRect(0, 0, width, height);
       context.fillStyle = `rgba(6, 11, 20, ${fillAlpha})`;
@@ -442,7 +443,7 @@
       const palette = getPalette(tone);
       palette.forEach(([color, amplitude, freq, phase], index) => {
         context.beginPath();
-        context.lineWidth = tone === "hero" ? 2 : 1.7;
+        context.lineWidth = minimalTheme ? 1.2 : tone === "hero" ? 2 : 1.7;
         context.strokeStyle = color;
         for (let x = 0; x <= width; x += 2) {
           const waveDrift = tone === "hero" ? 0.0016 : 0.0022;
@@ -459,7 +460,7 @@
         context.stroke();
       });
 
-      if (!label) {
+      if (!label || minimalTheme) {
         return;
       }
 
@@ -972,66 +973,68 @@
 
     window.gsap.registerPlugin(window.ScrollTrigger);
 
-    window.gsap.to(".ambient-a", {
-      x: 36,
-      y: -18,
-      duration: 14,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1
-    });
-    window.gsap.to(".ambient-b", {
-      x: -28,
-      y: 24,
-      duration: 16,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1
-    });
-    window.gsap.to(".ambient-c", {
-      x: 24,
-      y: -20,
-      duration: 18,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1
-    });
+    if (!minimalTheme) {
+      window.gsap.to(".ambient-a", {
+        x: 36,
+        y: -18,
+        duration: 14,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+      window.gsap.to(".ambient-b", {
+        x: -28,
+        y: 24,
+        duration: 16,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+      window.gsap.to(".ambient-c", {
+        x: 24,
+        y: -20,
+        duration: 18,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
 
-    window.gsap.to(".wave-panel", {
-      y: -6,
-      duration: 3.6,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1,
-      stagger: 0.35
-    });
+      window.gsap.to(".wave-panel", {
+        y: -6,
+        duration: 3.6,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+        stagger: 0.35
+      });
 
-    window.gsap.to(".hero-kicker-pill", {
-      boxShadow: "0 0 28px rgba(76, 210, 255, 0.32)",
-      duration: 1.9,
-      yoyo: true,
-      repeat: -1,
-      stagger: 0.22,
-      ease: "sine.inOut"
-    });
+      window.gsap.to(".hero-kicker-pill", {
+        boxShadow: "0 0 28px rgba(76, 210, 255, 0.32)",
+        duration: 1.9,
+        yoyo: true,
+        repeat: -1,
+        stagger: 0.22,
+        ease: "sine.inOut"
+      });
 
-    window.gsap.to(".hero-floating-a", {
-      y: -5,
-      x: 2,
-      duration: 2.8,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1
-    });
+      window.gsap.to(".hero-floating-a", {
+        y: -5,
+        x: 2,
+        duration: 2.8,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
 
-    window.gsap.to(".hero-floating-b", {
-      y: 5,
-      x: -2,
-      duration: 3.3,
-      ease: "sine.inOut",
-      yoyo: true,
-      repeat: -1
-    });
+      window.gsap.to(".hero-floating-b", {
+        y: 5,
+        x: -2,
+        duration: 3.3,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+    }
 
     window.gsap.to("[data-hero-stagger]", {
       opacity: 1,
@@ -1063,14 +1066,14 @@
 
     window.gsap.fromTo(
       ".hero-visual",
-      { scale: 0.975, rotateX: -3, y: 22, opacity: 0 },
+      { scale: minimalTheme ? 0.995 : 0.975, rotateX: minimalTheme ? 0 : -3, y: 22, opacity: 0 },
       {
         scale: 1,
         rotateX: 0,
         y: 0,
         opacity: 1,
-        duration: 1.1,
-        ease: "power3.out"
+        duration: minimalTheme ? 0.78 : 1.1,
+        ease: minimalTheme ? "power2.out" : "power3.out"
       }
     );
 
@@ -1157,17 +1160,19 @@
     });
 
     window.gsap.utils.toArray(".benchmark-card[data-priority='high']").forEach((card) => {
-      window.gsap.fromTo(
-        card,
-        { boxShadow: "0 0 0 rgba(0,0,0,0)" },
-        {
-          boxShadow: "0 0 42px rgba(25, 239, 208, 0.22)",
-          duration: 1.5,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut"
-        }
-      );
+      if (!minimalTheme) {
+        window.gsap.fromTo(
+          card,
+          { boxShadow: "0 0 0 rgba(0,0,0,0)" },
+          {
+            boxShadow: "0 0 42px rgba(25, 239, 208, 0.22)",
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+          }
+        );
+      }
     });
   }
 

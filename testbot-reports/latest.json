@@ -1,0 +1,306 @@
+{
+  "metadata": {
+    "timestamp": "2026-03-04T08:06:09.833Z",
+    "projectName": "VOCA_AI",
+    "projectPath": "/Users/krishsharma/Desktop/VOCA_AI",
+    "version": "1.0.0",
+    "generator": "testbot-mcp"
+  },
+  "stats": {
+    "total": 15,
+    "passed": 10,
+    "failed": 5,
+    "skipped": 0,
+    "duration": 60887,
+    "passRate": 67
+  },
+  "tests": [
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-load-page-successfully",
+      "title": "should load page successfully",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "passed",
+      "duration": 3555,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-display-header-component",
+      "title": "should display header component",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "failed",
+      "duration": 8613,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/header/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/header/i).first()\u001b[22m\n",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/header/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/header/i).first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:34:72\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:32:5",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js",
+          "column": 72,
+          "line": 34
+        },
+        "snippet": "  32 |     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {\n  33 |       // Fallback: check if any text contains the component name\n> 34 |       return expect(page.getByText(new RegExp('header', 'i')).first()).toBeVisible();\n     |                                                                        ^\n  35 |     });\n  36 |   });\n  37 |"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-display-hero-component",
+      "title": "should display hero component",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "failed",
+      "duration": 8698,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/hero/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/hero/i).first()\u001b[22m\n",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/hero/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/hero/i).first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:49:70\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:47:5",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js",
+          "column": 70,
+          "line": 49
+        },
+        "snippet": "  47 |     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {\n  48 |       // Fallback: check if any text contains the component name\n> 49 |       return expect(page.getByText(new RegExp('hero', 'i')).first()).toBeVisible();\n     |                                                                      ^\n  50 |     });\n  51 |   });\n  52 |"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-display-products-component",
+      "title": "should display products component",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "passed",
+      "duration": 3576,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-display-assist-loop-component",
+      "title": "should display assist-loop component",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "failed",
+      "duration": 8791,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/assist-loop/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/assist-loop/i).first()\u001b[22m\n",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/assist-loop/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/assist-loop/i).first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:79:77\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:77:5",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js",
+          "column": 77,
+          "line": 79
+        },
+        "snippet": "  77 |     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {\n  78 |       // Fallback: check if any text contains the component name\n> 79 |       return expect(page.getByText(new RegExp('assist-loop', 'i')).first()).toBeVisible();\n     |                                                                             ^\n  80 |     });\n  81 |   });\n  82 |"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-display-voice-demo-component",
+      "title": "should display voice-demo component",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "failed",
+      "duration": 8636,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/voice-demo/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/voice-demo/i).first()\u001b[22m\n",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/voice-demo/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/voice-demo/i).first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:94:76\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:92:5",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js",
+          "column": 76,
+          "line": 94
+        },
+        "snippet": "  92 |     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {\n  93 |       // Fallback: check if any text contains the component name\n> 94 |       return expect(page.getByText(new RegExp('voice-demo', 'i')).first()).toBeVisible();\n     |                                                                            ^\n  95 |     });\n  96 |   });\n  97 |"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-display-benchmarks-component",
+      "title": "should display benchmarks component",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "passed",
+      "duration": 1330,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-display-cta-component",
+      "title": "should display cta component",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "failed",
+      "duration": 5740,
+      "error": {
+        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/cta/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/cta/i).first()\u001b[22m\n",
+        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText(/cta/i).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/cta/i).first()\u001b[22m\n\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:124:69\n    at /Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js:122:5",
+        "location": {
+          "file": "/Users/krishsharma/Desktop/VOCA_AI/tests/generated/page_home.spec.js",
+          "column": 69,
+          "line": 124
+        },
+        "snippet": "  122 |     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {\n  123 |       // Fallback: check if any text contains the component name\n> 124 |       return expect(page.getByText(new RegExp('cta', 'i')).first()).toBeVisible();\n      |                                                                     ^\n  125 |     });\n  126 |   });\n  127 |"
+      },
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/page_home.spec.js->-VOCA-AI-landing-page-should-have-working-nav-links-(#products,-#assist-loop,-#voice-demo,-#benchmarks,-#cta)",
+      "title": "should have working nav links (#products, #assist-loop, #voice-demo, #benchmarks, #cta)",
+      "suite": "generated/page_home.spec.js > VOCA AI landing page",
+      "file": "generated/page_home.spec.js",
+      "status": "passed",
+      "duration": 5879,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/workflow_book_a_demo__cta_flow.spec.js->-Workflow:-Book-a-demo-/-CTA-flow-should-complete-book-a-demo-/-cta-flow-successfully",
+      "title": "should complete book a demo / cta flow successfully",
+      "suite": "generated/workflow_book_a_demo__cta_flow.spec.js > Workflow: Book a demo / CTA flow",
+      "file": "generated/workflow_book_a_demo__cta_flow.spec.js",
+      "status": "passed",
+      "duration": 994,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/workflow_book_a_demo__cta_flow.spec.js->-Workflow:-Book-a-demo-/-CTA-flow-should-handle-errors-gracefully",
+      "title": "should handle errors gracefully",
+      "suite": "generated/workflow_book_a_demo__cta_flow.spec.js > Workflow: Book a demo / CTA flow",
+      "file": "generated/workflow_book_a_demo__cta_flow.spec.js",
+      "status": "passed",
+      "duration": 1275,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/workflow_navigate_to_sections_via_header.spec.js->-Workflow:-Navigate-to-sections-via-header-should-complete-navigate-to-sections-via-header-successfully",
+      "title": "should complete navigate to sections via header successfully",
+      "suite": "generated/workflow_navigate_to_sections_via_header.spec.js > Workflow: Navigate to sections via header",
+      "file": "generated/workflow_navigate_to_sections_via_header.spec.js",
+      "status": "passed",
+      "duration": 1282,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/workflow_navigate_to_sections_via_header.spec.js->-Workflow:-Navigate-to-sections-via-header-should-handle-errors-gracefully",
+      "title": "should handle errors gracefully",
+      "suite": "generated/workflow_navigate_to_sections_via_header.spec.js > Workflow: Navigate to sections via header",
+      "file": "generated/workflow_navigate_to_sections_via_header.spec.js",
+      "status": "passed",
+      "duration": 1268,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/workflow_play_voice_demo.spec.js->-Workflow:-Play-voice-demo-should-complete-play-voice-demo-successfully",
+      "title": "should complete play voice demo successfully",
+      "suite": "generated/workflow_play_voice_demo.spec.js > Workflow: Play voice demo",
+      "file": "generated/workflow_play_voice_demo.spec.js",
+      "status": "passed",
+      "duration": 611,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    },
+    {
+      "id": "generated/workflow_play_voice_demo.spec.js->-Workflow:-Play-voice-demo-should-handle-errors-gracefully",
+      "title": "should handle errors gracefully",
+      "suite": "generated/workflow_play_voice_demo.spec.js > Workflow: Play voice demo",
+      "file": "generated/workflow_play_voice_demo.spec.js",
+      "status": "passed",
+      "duration": 639,
+      "error": null,
+      "retries": 0,
+      "attachments": {
+        "screenshots": [],
+        "videos": [],
+        "traces": [],
+        "other": []
+      }
+    }
+  ],
+  "aiSummary": null,
+  "jiraSummary": null
+}
