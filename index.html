@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOCA AI | Revenue Conversations, Optimized</title>
+    <meta
+      name="description"
+      content="VOCA AI transforms voice operations with real-time call-center assist and autonomous multilingual voice agents."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a"></div>
+    <div class="ambient ambient-b"></div>
+    <div class="ambient ambient-c"></div>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="VOCA AI Home">
+          <img class="brand-logo" src="assets/voca-logo.svg" alt="" aria-hidden="true" />
+          <span class="brand-lockup">
+            <span class="brand-text">VOCA AI</span>
+            <span class="brand-sub">Revenue Voice OS</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary Navigation">
+          <a href="#products">Products</a>
+          <a href="#assist-loop">Assist Loop</a>
+          <a href="#voice-demo">Voice Demo</a>
+          <a href="#benchmarks">Outcomes</a>
+          <a href="#cta">Book Demo</a>
+        </nav>
+        <a class="btn btn-small header-cta" href="#cta">Talk to Sales</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section hero" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" id="hero-eyebrow" data-hero-stagger></p>
+            <div class="hero-kicker-row" data-hero-stagger>
+              <span class="hero-kicker-pill">VOCA AssistIQ</span>
+              <span class="hero-kicker-pill">VOCA VoiceOS</span>
+            </div>
+            <h1 class="hero-title" id="hero-title" data-hero-stagger></h1>
+            <p class="hero-subtitle" id="hero-subtitle" data-hero-stagger></p>
+            <div class="hero-proof" data-hero-stagger>
+              <article class="hero-proof-item">
+                <p class="hero-proof-title">During-call + post-call assist</p>
+                <p class="hero-proof-copy">
+                  AI nudges for upsell, cross-sell, objections, and automated recovery reachouts.
+                </p>
+              </article>
+              <article class="hero-proof-item">
+                <p class="hero-proof-title">Autonomous multilingual voice stack</p>
+                <p class="hero-proof-copy">
+                  VoiceOS handles complete conversations across Indic languages and English.
+                </p>
+              </article>
+            </div>
+            <div class="hero-cta" data-hero-stagger>
+              <a class="btn btn-primary" href="#cta">Book a Demo</a>
+              <a class="btn btn-outline" href="#voice-demo">Hear the AI Voice Stack</a>
+            </div>
+            <div class="hero-metrics">
+              <article class="metric-chip">
+                <span class="metric-value" data-count-to="15">0</span>
+                <span class="metric-label">% conversion uplift potential</span>
+              </article>
+              <article class="metric-chip">
+                <span class="metric-value" data-count-to="20">0</span>
+                <span class="metric-label">% near-miss recovery potential</span>
+              </article>
+              <article class="metric-chip">
+                <span class="metric-value" data-count-to="23">0</span>
+                <span class="metric-label">Indic languages + English</span>
+              </article>
+            </div>
+          </div>
+          <div class="hero-visual" data-hero-stagger>
+            <div class="hero-floating hero-floating-a">AssistIQ nudges live</div>
+            <div class="hero-floating hero-floating-b">VoiceOS multi-language active</div>
+            <canvas id="hero-wave" width="640" height="420" aria-hidden="true"></canvas>
+            <div class="hero-glass">
+              <p class="glass-label">Live Intent Stream</p>
+              <ul class="live-feed">
+                <li><span class="feed-pill intent-hot">High intent</span> Booking question detected</li>
+                <li><span class="feed-pill intent-mid">Cross-sell</span> Annual plan opportunity</li>
+                <li><span class="feed-pill intent-save">Recovery</span> Follow-up workflow triggered</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="leak">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">The Revenue Leak</p>
+            <h2>Every call has upsell intent. Most teams react only after the moment is gone.</h2>
+            <p>
+              VOCA AI is built for revenue-driven voice operations where missed upsell and
+              cross-sell nudges, weak coaching loops, and delayed post-call actions cause
+              avoidable loss.
+            </p>
+          </div>
+          <div class="pain-grid" id="pain-points"></div>
+        </div>
+      </section>
+
+      <div class="wave-divider" aria-hidden="true">
+        <canvas
+          class="wave-divider-canvas"
+          id="wave-divider-leak"
+          width="1400"
+          height="140"
+          data-wave-tone="teal"
+        ></canvas>
+      </div>
+
+      <section class="section legacy" id="legacy">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Why Legacy Stacks Break</p>
+            <h2>Dashboards explain yesterday. VOCA optimizes this call.</h2>
+          </div>
+          <div class="legacy-shell" id="legacy-shell">
+            <div class="legacy-panel legacy-before">
+              <h3>Traditional Flow</h3>
+              <ul>
+                <li>Post-call reports only</li>
+                <li>Rule-based prompts</li>
+                <li>Manual lead recovery</li>
+                <li>Top rep behavior stays tribal</li>
+              </ul>
+            </div>
+            <div class="legacy-panel legacy-after">
+              <h3>VOCA Revenue Flow</h3>
+              <ul>
+                <li>Real-time intent and objection detection</li>
+                <li>Live agent nudges during critical moments</li>
+                <li>Automated win-back orchestration</li>
+                <li>Top-performer behavior standardized at scale</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Two Products. One Revenue Engine.</p>
+            <h2>Deploy assistive intelligence, autonomous voice flows, or both.</h2>
+          </div>
+          <div class="product-grid" id="product-cards"></div>
+        </div>
+      </section>
+
+      <section class="section product-detail assist-detail" id="assistiq">
+        <div class="container detail-grid">
+          <div class="detail-copy" data-reveal>
+            <p class="eyebrow">VOCA AssistIQ</p>
+            <h2>During-call and post-call copilot for high-performing call centers.</h2>
+            <p>
+              AssistIQ listens in real time, scores intent, and delivers contextual nudges for
+              upsell, cross-sell, and objection rescue while orchestrating post-call reachout
+              flows for dropped high-intent leads.
+            </p>
+            <ul class="feature-list">
+              <li>Live upsell and cross-sell nudges based on intent and fit score</li>
+              <li>Objection rescue prompts with real-time next-best response</li>
+              <li>Near-booked drop risk alerts with instant callback prioritization</li>
+              <li>Post-call reachouts by SMS, email, and callback queue automation</li>
+              <li>Rep-level coaching loops from call outcomes and nudge acceptance</li>
+            </ul>
+          </div>
+          <div class="detail-card tilt-card" data-reveal>
+            <h3>AssistIQ Signal Map</h3>
+            <div class="signal-item">
+              <span>Intent strength</span>
+              <div class="signal-meter"><i style="--w: 92%"></i></div>
+            </div>
+            <div class="signal-item">
+              <span>Objection friction</span>
+              <div class="signal-meter"><i style="--w: 64%"></i></div>
+            </div>
+            <div class="signal-item">
+              <span>Upsell / cross-sell fit</span>
+              <div class="signal-meter"><i style="--w: 72%"></i></div>
+            </div>
+            <div class="signal-item">
+              <span>Post-call reachout urgency</span>
+              <div class="signal-meter"><i style="--w: 38%"></i></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section assist-loop" id="assist-loop">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">AssistIQ Revenue Loop</p>
+            <h2>From live nudges to post-call reachouts, high-intent leads stay in motion.</h2>
+            <p>
+              AssistIQ continuously pushes the right prompts during live conversations and
+              orchestrates automated follow-up tasks the second a call ends.
+            </p>
+          </div>
+          <canvas
+            class="wave-divider-canvas wave-panel"
+            id="assist-wave"
+            width="1080"
+            height="170"
+            data-wave-tone="coral"
+            aria-hidden="true"
+          ></canvas>
+          <div class="assist-loop-grid" id="assist-loop-grid"></div>
+        </div>
+      </section>
+
+      <section class="section product-detail voice-detail" id="voiceos">
+        <div class="container detail-grid">
+          <div class="detail-card tilt-card" data-reveal>
+            <h3>VoiceOS Workflow</h3>
+            <ol class="workflow-list">
+              <li>Intent-aware greeting and verification</li>
+              <li>Natural language resolution and qualification</li>
+              <li>Offer handling and preference capture</li>
+              <li>Seamless human handoff when needed</li>
+              <li>Structured wrap-up and CRM-ready output</li>
+            </ol>
+          </div>
+          <div class="detail-copy" data-reveal>
+            <p class="eyebrow">VOCA VoiceOS</p>
+            <h2>Autonomous voice agent infrastructure with Indic + English coverage.</h2>
+            <p>
+              VoiceOS handles inbound and outbound conversations with human-like turn-taking,
+              strong accent handling, and controlled escalation to live teams when confidence is
+              low.
+            </p>
+            <div class="language-block">
+              <p class="language-title">Supported language set</p>
+              <div class="language-cloud" id="language-cloud"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section voice-demo" id="voice-demo">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Voice Demo</p>
+            <h2>Hear the model quality behind VOCA VoiceOS.</h2>
+            <p>
+              Audio playback is presented with waveform intelligence for quick quality review.
+            </p>
+          </div>
+          <canvas
+            class="wave-divider-canvas wave-panel"
+            id="voice-wave"
+            width="1080"
+            height="170"
+            data-wave-tone="teal"
+            aria-hidden="true"
+          ></canvas>
+          <div class="demo-grid">
+            <article class="audio-card" data-reveal>
+              <div class="audio-header">
+                <h3>Audio-First Playback</h3>
+                <p>Mono compressed stream for fast web preview</p>
+              </div>
+              <audio id="demo-audio" preload="metadata" src="assets/voca-demo.mp3"></audio>
+              <canvas id="audio-visualizer" width="640" height="200" aria-hidden="true"></canvas>
+
+              <div class="audio-controls">
+                <button type="button" class="btn btn-primary btn-small" id="play-toggle">
+                  Play audio
+                </button>
+                <input
+                  id="seek-slider"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  step="0.1"
+                  aria-label="Seek demo audio"
+                />
+                <div class="audio-time">
+                  <span id="current-time">00:00</span>
+                  <span id="total-time">00:00</span>
+                </div>
+              </div>
+
+              <div class="segment-jumps">
+                <p>Jump to moments</p>
+                <div class="segment-row" id="segment-row"></div>
+              </div>
+              <div class="accent-row">
+                <p>Coverage</p>
+                <div class="segment-row" id="accent-row"></div>
+              </div>
+              <div class="transcript-strip" id="transcript-strip"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="benchmarks">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Outcome Benchmarks</p>
+            <h2>Commercial upside bands built to show leadership-level potential fast.</h2>
+            <p>
+              Benchmark ranges represent modeled potential from voice optimization programs.
+              Actual outcomes depend on call mix, process maturity, and deployment quality.
+            </p>
+          </div>
+          <div class="benchmark-spotlight" id="benchmark-spotlight"></div>
+          <div class="benchmark-grid" id="benchmark-cards"></div>
+        </div>
+      </section>
+
+      <section class="section integrations" id="integrations">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">How VOCA Fits</p>
+            <h2>Integrates with your existing CRM and telephony stack.</h2>
+          </div>
+          <div class="stack-strip" data-reveal>
+            <span>CRM</span>
+            <span>Dialer</span>
+            <span>Call Recording</span>
+            <span>QA Workflows</span>
+            <span>BI</span>
+          </div>
+          <div class="timeline-grid" data-reveal>
+            <article>
+              <h3>Week 1-2</h3>
+              <p>Signal mapping, pipeline hookup, and baseline KPI setup.</p>
+            </article>
+            <article>
+              <h3>Week 3-4</h3>
+              <p>Pilot rollout for AssistIQ and workflow tuning.</p>
+            </article>
+            <article>
+              <h3>Week 5-8</h3>
+              <p>VoiceOS flows, escalation design, and expansion by queue.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section guardrails" id="guardrails">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">Control and Trust</p>
+            <h2>Automation where it helps, human override where it matters.</h2>
+          </div>
+          <div class="guardrail-grid">
+            <article data-reveal>
+              <h3>Human-in-the-loop</h3>
+              <p>Escalation pathways keep complex moments in expert hands.</p>
+            </article>
+            <article data-reveal>
+              <h3>Approval gating</h3>
+              <p>Critical actions can require policy checks and human confirmation.</p>
+            </article>
+            <article data-reveal>
+              <h3>Auditability</h3>
+              <p>Conversation events are structured for QA, compliance, and coaching.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq" id="faq">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">FAQ</p>
+            <h2>Common questions before deployment.</h2>
+          </div>
+          <div class="faq-list" id="faq-list"></div>
+        </div>
+      </section>
+
+      <section class="section cta" id="cta">
+        <div class="container cta-grid">
+          <div class="cta-copy" data-reveal>
+            <p class="eyebrow">Book a Demo</p>
+            <h2 id="cta-title"></h2>
+            <p id="cta-subtitle"></p>
+            <ul class="cta-bullets">
+              <li>See AssistIQ and VoiceOS in your call-flow context</li>
+              <li>Review upsell and cross-sell nudge opportunities by call type</li>
+              <li>Map post-call reachout automation for dropped high-intent leads</li>
+              <li>Get a deployment blueprint in under 30 minutes</li>
+            </ul>
+          </div>
+          <form
+            class="demo-form"
+            id="demo-form"
+            action="https://formsubmit.co/ajax/krish.sharma@zapcg.com"
+            method="POST"
+            novalidate
+            data-reveal
+          >
+            <label for="full_name">Full name</label>
+            <input id="full_name" name="full_name" type="text" autocomplete="name" required />
+
+            <label for="work_email">Work email</label>
+            <input
+              id="work_email"
+              name="work_email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" required />
+
+            <label for="monthly_call_volume">Monthly call volume</label>
+            <select id="monthly_call_volume" name="monthly_call_volume" required>
+              <option value="">Select range</option>
+              <option value="<10k">&lt;10k</option>
+              <option value="10k-50k">10k-50k</option>
+              <option value="50k-200k">50k-200k</option>
+              <option value="200k+">200k+</option>
+            </select>
+
+            <label for="interest">Primary interest</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select product</option>
+              <option value="AssistIQ">VOCA AssistIQ</option>
+              <option value="VoiceOS">VOCA VoiceOS</option>
+              <option value="Both">Both</option>
+            </select>
+
+            <label for="message">Message (optional)</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell us your use case, channels, and priorities."
+            ></textarea>
+
+            <input type="hidden" name="_subject" value="VOCA AI Demo Request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input
+              type="text"
+              name="_honey"
+              tabindex="-1"
+              autocomplete="off"
+              class="honey-input"
+              aria-hidden="true"
+            />
+
+            <button type="submit" class="btn btn-primary">Request Demo</button>
+            <p class="form-note">
+              If submission fails,
+              <a
+                href="mailto:krish.sharma@zapcg.com?subject=VOCA%20AI%20Demo%20Request"
+                id="fallback-mailto"
+                >email us directly</a
+              >.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>VOCA AI | AI-native conversational intelligence for revenue voice operations.</p>
+        <p>&copy; <span id="year"></span> VOCA AI. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

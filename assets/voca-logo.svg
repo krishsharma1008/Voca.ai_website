@@ -1,0 +1,24 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="voca_bg" x1="16" y1="16" x2="144" y2="144" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18F0CF" />
+      <stop offset="0.5" stop-color="#2BC8FF" />
+      <stop offset="1" stop-color="#FF9A6A" />
+    </linearGradient>
+    <radialGradient id="voca_glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80 26) rotate(90) scale(120)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.58" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="voca_wave" x1="40" y1="96" x2="120" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8FAFF" />
+      <stop offset="1" stop-color="#FCEAD6" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="140" height="140" rx="34" fill="url(#voca_bg)" />
+  <rect x="16" y="16" width="128" height="128" rx="30" fill="url(#voca_glow)" />
+  <path d="M39 50L80 123L121 50" stroke="#041220" stroke-opacity="0.25" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M42 47L80 116L118 47" stroke="#F4FDFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M45 93C52 86 59 86 66 93C73 100 80 100 87 93C94 86 101 86 108 93C113 98 118 99 123 96" stroke="url(#voca_wave)" stroke-width="7" stroke-linecap="round" />
+  <circle cx="48" cy="93" r="3.5" fill="#E8FFFF" />
+  <circle cx="122" cy="96" r="3.5" fill="#FFE7C5" />
+</svg>
