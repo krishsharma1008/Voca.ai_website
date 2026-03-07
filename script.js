@@ -411,22 +411,22 @@
     function getPalette(tone) {
       if (tone === "coral") {
         return [
-          ["rgba(255, 191, 84, 0.9)", 13, 0.012, 0.2],
-          ["rgba(255, 140, 97, 0.75)", 18, 0.015, 1.0],
-          ["rgba(46, 206, 255, 0.56)", 10, 0.018, 1.7]
+          ["rgba(255, 229, 0, 0.92)", 13, 0.012, 0.2],
+          ["rgba(255, 69, 0, 0.8)", 18, 0.015, 1.0],
+          ["rgba(255, 255, 255, 0.4)", 10, 0.018, 1.7]
         ];
       }
       if (tone === "teal") {
         return [
-          ["rgba(25, 239, 208, 0.88)", 14, 0.011, 0.1],
-          ["rgba(43, 200, 255, 0.78)", 18, 0.014, 0.7],
-          ["rgba(255, 191, 84, 0.5)", 9, 0.019, 1.6]
+          ["rgba(255, 229, 0, 0.9)", 14, 0.011, 0.1],
+          ["rgba(255, 255, 255, 0.65)", 18, 0.014, 0.7],
+          ["rgba(255, 69, 0, 0.5)", 9, 0.019, 1.6]
         ];
       }
       return [
-        ["rgba(25, 239, 208, 0.85)", 18, 0.011, 0.0],
-        ["rgba(43, 200, 255, 0.8)", 30, 0.014, 0.8],
-        ["rgba(255, 140, 97, 0.68)", 12, 0.018, 1.2]
+        ["rgba(255, 229, 0, 0.88)", 18, 0.011, 0.0],
+        ["rgba(255, 255, 255, 0.72)", 30, 0.014, 0.8],
+        ["rgba(255, 69, 0, 0.6)", 12, 0.018, 1.2]
       ];
     }
 
@@ -437,7 +437,7 @@
       const fillAlpha = minimalTheme ? (tone === "hero" ? 0.22 : 0.36) : tone === "hero" ? 0.45 : 0.75;
 
       context.clearRect(0, 0, width, height);
-      context.fillStyle = `rgba(6, 11, 20, ${fillAlpha})`;
+      context.fillStyle = `rgba(13, 13, 13, ${fillAlpha})`;
       context.fillRect(0, 0, width, height);
 
       const palette = getPalette(tone);
@@ -561,7 +561,7 @@
       const height = visualizer.height;
       canvasCtx.clearRect(0, 0, width, height);
 
-      canvasCtx.fillStyle = "rgba(4, 9, 18, 0.9)";
+      canvasCtx.fillStyle = "rgba(13, 13, 13, 0.95)";
       canvasCtx.fillRect(0, 0, width, height);
 
       const barWidth = width / dataArray.length;
@@ -570,14 +570,14 @@
         const barHeight = (value / 255) * (height - 20);
         const x = i * barWidth;
         const y = height - barHeight;
-        const hue = 165 + (i / dataArray.length) * 35;
-        canvasCtx.fillStyle = `hsla(${hue}, 95%, 64%, 0.88)`;
+        const hue = 42 + (i / dataArray.length) * 18;
+        canvasCtx.fillStyle = `hsla(${hue}, 100%, 55%, 0.92)`;
         canvasCtx.fillRect(x, y, Math.max(1, barWidth - 2), barHeight);
       }
 
       canvasCtx.beginPath();
       canvasCtx.lineWidth = 2.2;
-      canvasCtx.strokeStyle = "rgba(156, 238, 255, 0.92)";
+      canvasCtx.strokeStyle = "rgba(255, 229, 0, 0.95)";
       for (let i = 0; i < timeDataArray.length; i += 1) {
         const x = (i / (timeDataArray.length - 1)) * width;
         const y = (timeDataArray[i] / 255) * height;
@@ -601,9 +601,9 @@
       const width = visualizer.width;
       const height = visualizer.height;
       canvasCtx.clearRect(0, 0, width, height);
-      canvasCtx.fillStyle = "rgba(4, 9, 18, 0.9)";
+      canvasCtx.fillStyle = "rgba(13, 13, 13, 0.95)";
       canvasCtx.fillRect(0, 0, width, height);
-      canvasCtx.strokeStyle = "rgba(101, 220, 255, 0.4)";
+      canvasCtx.strokeStyle = "rgba(255, 229, 0, 0.45)";
       canvasCtx.lineWidth = 2;
       canvasCtx.beginPath();
       for (let x = 0; x <= width; x += 8) {
@@ -1107,9 +1107,9 @@
     if (legacyAfter) {
       window.gsap.fromTo(
         legacyAfter,
-        { clipPath: "inset(0 100% 0 0 round 24px)" },
+        { clipPath: "inset(0 100% 0 0 round 0px)" },
         {
-          clipPath: "inset(0 0% 0 0 round 24px)",
+          clipPath: "inset(0 0% 0 0 round 0px)",
           ease: "none",
           scrollTrigger: {
             trigger: "#legacy-shell",
