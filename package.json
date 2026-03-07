@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "test": "playwright test",
+    "test:unit": "playwright test tests/unit/",
+    "test:generated": "playwright test tests/generated/",
+    "serve": "python3 -m http.server 8000"
+  },
   "devDependencies": {
     "@playwright/test": "^1.58.2"
   }
