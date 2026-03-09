@@ -1458,7 +1458,14 @@ details.faq-item p {
   padding: 0.9rem;
 }
 
-.honey-input { display: none !important; }
+.honey-input {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
 
 .form-note {
   font-size: 0.72rem;
