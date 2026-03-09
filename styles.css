@@ -1878,7 +1878,7 @@ p { margin: 0 0 1rem; }
 
 .demo-form button[type="submit"] { width: 100%; }
 
-.honey-input { display: none; }
+.honey-input { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
 
 .form-note {
   font-size: 0.7rem;
