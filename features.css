@@ -3,8 +3,6 @@
    Extends the neo-brutalist design system from styles.css
    ══════════════════════════════════════════════════════════════ */
 
-@import url('./styles.css');
-
 /* ── SMOOTH SCROLL ───────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
