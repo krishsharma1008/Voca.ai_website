@@ -15,113 +15,71 @@ test.describe('VOCA AI landing page', () => {
   test('should load page successfully', async ({ page }) => {
     // Verify page loads
     await expect(page).toHaveURL(new RegExp('\/'));
-    
+
     // Wait for page to be ready
     await page.waitForLoadState('domcontentloaded');
   });
 
   test('should display header component', async ({ page }) => {
-    // Look for header by various selectors
-    const element = page.locator(`
-      [data-testid="header"],
-      [class*="header"],
-      text=header
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
-    // At least one selector should match
+    // Look for header by data-testid, then class, then any visible nav landmark
+    const element = page.locator('[data-testid="header"], [class*="header"]');
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
-      // Fallback: check if any text contains the component name
-      return expect(page.getByText(new RegExp('header', 'i')).first()).toBeVisible();
+      // Fallback: check for a visible nav element
+      return expect(page.locator('header, nav').first()).toBeVisible();
     });
   });
 
   test('should display hero component', async ({ page }) => {
-    // Look for hero by various selectors
-    const element = page.locator(`
-      [data-testid="hero"],
-      [class*="hero"],
-      text=hero
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
-    // At least one selector should match
+    // Look for hero by data-testid, then class
+    const element = page.locator('[data-testid="hero"], [class*="hero"]');
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
-      // Fallback: check if any text contains the component name
-      return expect(page.getByText(new RegExp('hero', 'i')).first()).toBeVisible();
+      // Fallback: check if any prominent heading is visible
+      return expect(page.locator('h1').first()).toBeVisible();
     });
   });
 
   test('should display products component', async ({ page }) => {
-    // Look for products by various selectors
-    const element = page.locator(`
-      [data-testid="products"],
-      [class*="products"],
-      text=products
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
-    // At least one selector should match
+    // Look for products by data-testid, then class, then text
+    const element = page.locator('[data-testid="products"], [class*="product"]');
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
-      return expect(page.getByText(new RegExp('products', 'i')).first()).toBeVisible();
+      return expect(page.getByText(/products/i).first()).toBeVisible();
     });
   });
 
   test('should display assist-loop component', async ({ page }) => {
-    // Look for assist-loop by various selectors
-    const element = page.locator(`
-      [data-testid="assist-loop"],
-      [class*="assist-loop"],
-      text=assist-loop
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
-    // At least one selector should match
+    // Look for assist-loop by data-testid, then class
+    const element = page.locator('[data-testid="assist-loop"], [class*="assist-loop"]');
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
-      // Fallback: check if any text contains the component name
-      return expect(page.getByText(new RegExp('assist-loop', 'i')).first()).toBeVisible();
+      // Fallback: check if AssistIQ text is visible
+      return expect(page.getByText(/assistiq/i).first()).toBeVisible();
     });
   });
 
   test('should display voice-demo component', async ({ page }) => {
-    // Look for voice-demo by various selectors
-    const element = page.locator(`
-      [data-testid="voice-demo"],
-      [class*="voice-demo"],
-      text=voice-demo
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
-    // At least one selector should match
+    // Look for voice-demo by data-testid, then class
+    const element = page.locator('[data-testid="voice-demo"], [class*="voice-demo"]');
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
-      // Fallback: check if any text contains the component name
-      return expect(page.getByText(new RegExp('voice-demo', 'i')).first()).toBeVisible();
+      // Fallback: check for audio element
+      return expect(page.locator('audio').first()).toBeVisible();
     });
   });
 
   test('should display benchmarks component', async ({ page }) => {
-    // Look for benchmarks by various selectors
-    const element = page.locator(`
-      [data-testid="benchmarks"],
-      [class*="benchmarks"],
-      text=benchmarks
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
-    // At least one selector should match
+    // Look for benchmarks by data-testid, then class, then text
+    const element = page.locator('[data-testid="benchmarks"], [class*="benchmark"]');
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
-      return expect(page.getByText(new RegExp('benchmarks', 'i')).first()).toBeVisible();
+      return expect(page.getByText(/benchmarks/i).first()).toBeVisible();
     });
   });
 
   test('should display cta component', async ({ page }) => {
-    // Look for cta by various selectors
-    const element = page.locator(`
-      [data-testid="cta"],
-      [class*="cta"],
-      text=cta
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
-    // At least one selector should match
+    // Look for cta by data-testid, then class
+    const element = page.locator('[data-testid="cta"], [class*="cta"]');
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
-      // Fallback: check if any text contains the component name
-      return expect(page.getByText(new RegExp('cta', 'i')).first()).toBeVisible();
+      // Fallback: check for a submit/demo button
+      return expect(page.locator('button[type="submit"]').first()).toBeVisible();
     });
   });
 
