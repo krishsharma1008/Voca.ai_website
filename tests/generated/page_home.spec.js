@@ -15,19 +15,17 @@ test.describe('VOCA AI landing page', () => {
   test('should load page successfully', async ({ page }) => {
     // Verify page loads
     await expect(page).toHaveURL(new RegExp('\/'));
-    
+
     // Wait for page to be ready
     await page.waitForLoadState('domcontentloaded');
   });
 
   test('should display header component', async ({ page }) => {
-    // Look for header by various selectors
-    const element = page.locator(`
-      [data-testid="header"],
-      [class*="header"],
-      text=header
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
+    // Look for header by various selectors using valid Playwright locator chaining
+    const element = page.locator('[data-testid="header"]')
+      .or(page.locator('[class*="header"]'))
+      .or(page.locator('text=header'));
+
     // At least one selector should match
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
@@ -36,13 +34,11 @@ test.describe('VOCA AI landing page', () => {
   });
 
   test('should display hero component', async ({ page }) => {
-    // Look for hero by various selectors
-    const element = page.locator(`
-      [data-testid="hero"],
-      [class*="hero"],
-      text=hero
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
+    // Look for hero by various selectors using valid Playwright locator chaining
+    const element = page.locator('[data-testid="hero"]')
+      .or(page.locator('[class*="hero"]'))
+      .or(page.locator('text=hero'));
+
     // At least one selector should match
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
@@ -51,13 +47,11 @@ test.describe('VOCA AI landing page', () => {
   });
 
   test('should display products component', async ({ page }) => {
-    // Look for products by various selectors
-    const element = page.locator(`
-      [data-testid="products"],
-      [class*="products"],
-      text=products
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
+    // Look for products by various selectors using valid Playwright locator chaining
+    const element = page.locator('[data-testid="products"]')
+      .or(page.locator('[class*="products"]'))
+      .or(page.locator('text=products'));
+
     // At least one selector should match
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
@@ -66,13 +60,11 @@ test.describe('VOCA AI landing page', () => {
   });
 
   test('should display assist-loop component', async ({ page }) => {
-    // Look for assist-loop by various selectors
-    const element = page.locator(`
-      [data-testid="assist-loop"],
-      [class*="assist-loop"],
-      text=assist-loop
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
+    // Look for assist-loop by various selectors using valid Playwright locator chaining
+    const element = page.locator('[data-testid="assist-loop"]')
+      .or(page.locator('[class*="assist-loop"]'))
+      .or(page.locator('text=assist-loop'));
+
     // At least one selector should match
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
@@ -81,13 +73,11 @@ test.describe('VOCA AI landing page', () => {
   });
 
   test('should display voice-demo component', async ({ page }) => {
-    // Look for voice-demo by various selectors
-    const element = page.locator(`
-      [data-testid="voice-demo"],
-      [class*="voice-demo"],
-      text=voice-demo
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
+    // Look for voice-demo by various selectors using valid Playwright locator chaining
+    const element = page.locator('[data-testid="voice-demo"]')
+      .or(page.locator('[class*="voice-demo"]'))
+      .or(page.locator('text=voice-demo'));
+
     // At least one selector should match
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
@@ -96,13 +86,11 @@ test.describe('VOCA AI landing page', () => {
   });
 
   test('should display benchmarks component', async ({ page }) => {
-    // Look for benchmarks by various selectors
-    const element = page.locator(`
-      [data-testid="benchmarks"],
-      [class*="benchmarks"],
-      text=benchmarks
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
+    // Look for benchmarks by various selectors using valid Playwright locator chaining
+    const element = page.locator('[data-testid="benchmarks"]')
+      .or(page.locator('[class*="benchmarks"]'))
+      .or(page.locator('text=benchmarks'));
+
     // At least one selector should match
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
@@ -111,13 +99,11 @@ test.describe('VOCA AI landing page', () => {
   });
 
   test('should display cta component', async ({ page }) => {
-    // Look for cta by various selectors
-    const element = page.locator(`
-      [data-testid="cta"],
-      [class*="cta"],
-      text=cta
-    `.replace(/\s+/g, '').split(',').join(', '));
-    
+    // Look for cta by various selectors using valid Playwright locator chaining
+    const element = page.locator('[data-testid="cta"]')
+      .or(page.locator('[class*="cta"]'))
+      .or(page.locator('text=cta'));
+
     // At least one selector should match
     await expect(element.first()).toBeVisible({ timeout: 10000 }).catch(() => {
       // Fallback: check if any text contains the component name
