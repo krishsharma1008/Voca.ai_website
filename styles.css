@@ -1935,6 +1935,24 @@ p { margin: 0 0 1rem; }
   opacity: 0.5;
 }
 
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-link {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 /* ── TOAST ─────────────────────────────────────────────────── */
 .toast {
   position: fixed;
