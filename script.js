@@ -561,7 +561,7 @@
       const height = visualizer.height;
       canvasCtx.clearRect(0, 0, width, height);
 
-      canvasCtx.fillStyle = "rgba(4, 4, 12, 0.95)";
+      canvasCtx.fillStyle = "rgba(10, 10, 10, 0.97)";
       canvasCtx.fillRect(0, 0, width, height);
 
       const barWidth = width / dataArray.length;
@@ -570,14 +570,14 @@
         const barHeight = (value / 255) * (height - 20);
         const x = i * barWidth;
         const y = height - barHeight;
-        const hue = 260 + (i / dataArray.length) * 60;
-        canvasCtx.fillStyle = `hsla(${hue}, 80%, 65%, 0.88)`;
+        const t = i / dataArray.length;
+        canvasCtx.fillStyle = t < 0.5 ? `rgba(255,229,0,${0.7 + t * 0.4})` : `rgba(0,71,255,${0.7 + (1-t) * 0.4})`;
         canvasCtx.fillRect(x, y, Math.max(1, barWidth - 2), barHeight);
       }
 
       canvasCtx.beginPath();
       canvasCtx.lineWidth = 2.2;
-      canvasCtx.strokeStyle = "rgba(34, 211, 238, 0.9)";
+      canvasCtx.strokeStyle = "rgba(255,229,0,0.9)";
       for (let i = 0; i < timeDataArray.length; i += 1) {
         const x = (i / (timeDataArray.length - 1)) * width;
         const y = (timeDataArray[i] / 255) * height;
@@ -601,9 +601,9 @@
       const width = visualizer.width;
       const height = visualizer.height;
       canvasCtx.clearRect(0, 0, width, height);
-      canvasCtx.fillStyle = "rgba(4, 4, 12, 0.95)";
+      canvasCtx.fillStyle = "rgba(10, 10, 10, 0.97)";
       canvasCtx.fillRect(0, 0, width, height);
-      canvasCtx.strokeStyle = "rgba(139, 92, 246, 0.45)";
+      canvasCtx.strokeStyle = "rgba(255,229,0,0.55)";
       canvasCtx.lineWidth = 2;
       canvasCtx.beginPath();
       for (let x = 0; x <= width; x += 8) {
